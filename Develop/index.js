@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require('fs');
 const util = require("util");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 const writeFileAsync = util.promisify(fs.writeFile);
 
@@ -32,9 +33,15 @@ function promptUser() {
         message: "type in the usage for this readme"
       },
       {
-        type: "input",
+        type: "checkbox",
         name: "Licenses",
-        message: "enter the licenses for this readme"
+        message: "enter the licenses for this readme",
+        choices: [
+          'Apache License 2.0',
+          'GNU General Public License v3.0',
+          'MIT License',
+          'BSD 2-Clause "Simplified" License'
+        ]
       },
       {
         type: "input",
@@ -55,19 +62,24 @@ function promptUser() {
   }
   
 // function to write README file
-function writeToFileAsync(fileName, data) {
+function writeToFile(fileName, data) {
+  fs.writeFile('readme.txt', data, fileName, (err) => {
+    if (err) throw err;
+    console.log('the readme has been generated')
+  });   
 
 }
 
 // function to initialize program
-function init() {
-
+async function init() {
   try {
     const responses = await promptUser();
 
-    await writeFileAsync("readme.txt", fileName);
+    const readMe = generateMarkdown(responses);
 
-    console.log("Successfully generated readme file");
+    await writeFileAsync("readme.txt", readMe);
+
+    console.log("Successfully wrote to readme.txt");
 
   } catch(err) {
     console.log(err);
