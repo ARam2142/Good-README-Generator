@@ -4,26 +4,58 @@ function generateMarkdown(responses) {
   //display structure for readme file when generated
   //title of your project and sections entitled Description, Table of Contents, 
   //Installation, Usage, License, Contributing, Tests, and Questions
-  return `# ${responses.title}
+  //[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  //[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+  //[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  return `
+
+  //[![License: MIT](https://img.shields.io/${responses.badge}/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+  # ${responses.Title}
+
+  # Description 
+  ${responses.Description}
+
+  # Table of Contents
+
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usagae)
+  - [Licenses](#licenses)
+  - [Contributions](#contributions)
+  - [Tests](#tests)
+  - [Questions](#questions)
+
+  # Installation 
+  ${responses.Installation}
+
+  # Usage
+  ${responses.Usage}
+
+  # Licenses
+  ${responses.Licenses}
+
+  # Contributions
+  ${responses.Contributions}
+
+  # Tests 
+  ${responses.Tests}
   
+  # Questions
+  If you have any questions please dont hesitate to reach out to me 
+  at:
+
+  * email: ${responses.Email}
+
+  * gitHub: https://github.com/${responses.Username}
+
   `;
 }
 
 module.exports = generateMarkdown;
 
 
-
-
-
 /*
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a quality, professional README.md is generated with the title of your project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
-WHEN I choose a license for my application from a list of options
 THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
 WHEN I enter my GitHub username
 THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
