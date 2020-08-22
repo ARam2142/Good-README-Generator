@@ -32,10 +32,9 @@ const questions = [
       name: "License",
       message: "choose a license for this readme",
       choices: [
-        'IPL 1.0',
-        'MPL 2.0',
-        'MIT',
-        'none'
+        'The MIT License',
+        'Mozilla Public License 2.0',
+        'GNU AGPL v3'
       ]
     },
     {

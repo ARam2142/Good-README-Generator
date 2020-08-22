@@ -1,16 +1,17 @@
+const badges = require('./LICENSES');
+
 // function to generate markdown for README
 function generateMarkdown(responses) {
 
-  //display structure for readme file when generated
-  //title of your project and sections entitled Description, Table of Contents, 
-  //Installation, Usage, License, Contributing, Tests, and Questions
-  //[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  
   //[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
-  //[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  //[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+  //[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+
   return `
-
-  //[![License: MIT](https://img.shields.io/${responses.badge}/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+  
+  ${badges[responses.License]}
+  
   # ${responses.Title}
 
   # Description 
@@ -21,7 +22,7 @@ function generateMarkdown(responses) {
   - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usagae)
-  - [Licenses](#licenses)
+  - [License](#license)
   - [Contributions](#contributions)
   - [Tests](#tests)
   - [Questions](#questions)
@@ -32,8 +33,8 @@ function generateMarkdown(responses) {
   # Usage
   ${responses.Usage}
 
-  # Licenses
-  ${responses.Licenses}
+  # License
+  This project is covered under the ${responses.License} license
 
   # Contributions
   ${responses.Contributions}
