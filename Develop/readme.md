@@ -1,11 +1,11 @@
 
   
-  [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   
-  # README Generator
+  # readme generator
 
   # Description 
-  This application will help you dynamically create a readme file for you project. This will save time so you dont have to do it from scratch
+  this app will create a readme for your project
 
   # Table of Contents
 
@@ -18,19 +18,19 @@
   - [Questions](#questions)
 
   # Installation 
-  install the npm install and inquirer
+  go to my repository and fork from my file
 
   # Usage
-  This is for everyone.
+  everybody
 
   # License
-  This project is covered under the Mozilla Public License 2.0 license
+  This project is covered under the The MIT License license
 
   # Contributions
-  myself so far
+  myself
 
   # Tests 
-  Test were done manually
+  none
   
   # Questions
   If you have any questions please dont hesitate to reach out to me 

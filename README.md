@@ -9,6 +9,8 @@ This project was to design a readme file by using node.js. Its to help users cre
 
 Go to the Readme repository and fork from my file. You must have node.js. You will have to install inquirer and npm packages.
 
+deployed live link: https://drive.google.com/file/d/1DvC6twhBN1s2Q6y3TqhODLuvzVHQpBxQ/view
+
 # Screenshots
 
 ![Screen Shot 2020-08-22 at 5 30 54 PM](https://user-images.githubusercontent.com/65634748/90966176-5d079d80-e49d-11ea-8ede-8b233516fbee.png)
